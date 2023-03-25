@@ -17,11 +17,8 @@ def draw_menu(context, menu_name, parent=None):
     def build_menu_items(parent, depth=0, ancestor_items=''):
         if parent:
             items = parent.children.all()
-            print('est papa', items)
-            print('papa', parent)
         else:
             items = menu_items.filter(name=menu_name)
-            print('net papa', items)
         menu_html = f'<ul>' if parent else '<ul>'
         for item in items:
             is_active = item.url == active_url
