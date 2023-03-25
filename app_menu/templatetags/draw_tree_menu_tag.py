@@ -12,7 +12,6 @@ def draw_menu(context, menu_name, parent=None):
     request = context['request']
     active_url = request.path
     menu_items = MenuItem.objects.all().prefetch_related('parent', 'children')
-    print(parent)
 
     def build_menu_items(parent, depth=0, ancestor_items=''):
         if parent:
