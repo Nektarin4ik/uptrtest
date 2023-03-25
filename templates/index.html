@@ -1,0 +1,13 @@
+{% load draw_tree_menu_tag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for name in names %}
+    {% draw_menu name %}
+{% endfor %}
+</body>
+</html>
